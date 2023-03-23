@@ -44,14 +44,8 @@ fetch(url)
     .then(res => res.json())
     .then((data: Produto[])=> {
 
-      const ol =  document.querySelector('ol')!
-      data.forEach(produto =>{
-        console.log(produto);
-        const li = document.createElement('li')
-        li.innerHTML = produto.nome
-        ol.append(li)
-      })
-
-
-      document.body.innerHTML = JSON.stringify(data)
+      const template =  document.querySelector('template')!
+     data.forEach(produto => {
+      console.log(produto);
+     });
     })
